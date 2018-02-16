@@ -73,6 +73,31 @@ class NodesecurityAnalizer(object):
         api_data['source'] = None
         return False
 
+    def restructure_data(self, api_data):
+        template = {
+            "id":None,
+            "references":[],
+            "vulnerable_configuration":[],
+            "vulnerable_configuration_cpe_2_2":[],
+            "Published":None,
+            "Modified":None,
+            "cvss":None,
+            "access":{
+                "vector":None,
+                "complexity":None,
+                "authentication":None
+            },
+            "impact":{
+                "confidentiality":None,
+                "integrity":None,
+                "availability":None
+            },
+            "cvss-time":None,
+            "cwe":None,
+            "summary":None
+        }
+        pass
+
 
 def main(config):
     # type: (dict) -> None
